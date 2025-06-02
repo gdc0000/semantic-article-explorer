@@ -7,12 +7,12 @@ import logging
 from pathlib import Path
 
 # Get the parent directory of the current script
-parent_dir = Path(__file__).parent.parent
+# parent_dir = Path(__file__).parent.parent parent_dir / 
 
 # Configure basic logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def load_config(config_path= parent_dir / "config.yaml"):
+def load_config(config_path= "config.yaml"):
     """Loads the YAML configuration file."""
     try:
         with open(config_path, 'r') as f:
@@ -24,7 +24,7 @@ def load_config(config_path= parent_dir / "config.yaml"):
         logging.error(f"Error loading configuration: {e}")
         raise
 
-def load_raw_data(file_path= parent_dir / "data/raw_records.json"):
+def load_raw_data(file_path= "data/raw_records.json"):
     """
     Loads raw data from a JSON file.
     Assumes a list of dictionaries.
