@@ -1,1 +1,29 @@
- 
+ # config.yaml
+paths:
+  raw_data: "data/raw_records.json"
+  processed_data: "data/processed_records.parquet"
+  embeddings: "data/embeddings.npy"
+  faiss_index: "data/faiss_index.faiss"
+
+embedding_model:
+  name: "sentence-transformers/all-MiniLM-L6-v2"
+  text_fields_to_embed: ["title", "abstract"]
+  query_prefix: "query: "   # For E5 models
+  passage_prefix: "passage: " # For E5 models
+  batch_size: 32
+
+faiss_params:
+  index_type: "IndexFlatL2"  # Simple L2 distance index
+
+umap_params:
+  n_neighbors: 15
+  min_dist: 0.1
+  n_components: 2            # 2 for 2D, 3 for 3D visualization
+  metric: "cosine"
+
+app_settings:
+  title: "Semantic Article Explorer"
+  plot_dimensions: 2         # 2 or 3
+  default_top_k: 5
+  max_abstract_length_display: 500
+  plot_point_size: 5
