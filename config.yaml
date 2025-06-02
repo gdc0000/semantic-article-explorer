@@ -1,0 +1,39 @@
+# config.yaml
+paths:
+  # raw_data: "data/raw_records.json"
+  raw_data: "C:/Users/Gabriele/Desktop/semantic-article-explorer/semantic-article-explorer/data/raw_records.json"
+  # processed_data: "/data/processed_records.parquet"
+  # embeddings: "/data/embeddings.npy"
+  # faiss_index: "/data/faiss_index.faiss"
+
+  processed_data: "C:/Users/Gabriele/Desktop/semantic-article-explorer/semantic-article-explorer/data/processed_records.parquet"
+  embeddings: "C:/Users/Gabriele/Desktop/semantic-article-explorer/semantic-article-explorer/data/embeddings.npy"
+  faiss_index: "C:/Users/Gabriele/Desktop/semantic-article-explorer/semantic-article-explorer/data/faiss_index.faiss"
+
+embedding_model:
+  name: "sentence-transformers/all-MiniLM-L6-v2" # 384 dimensions. Good balance.
+  # For e5-base-v2 (768D), uncomment below and comment out all-MiniLM-L6-v2
+  # name: "intfloat/e5-base-v2"
+  # query_prefix: "query: " # Needed for e5 models
+  # passage_prefix: "passage: " # Needed for e5 models
+  text_fields_to_embed: ["title", "abstract"] # Fields to combine for embedding
+  batch_size: 32
+
+umap_params:
+  n_neighbors: 15
+  min_dist: 0.1
+  n_components: 2 # 2 for 2D, 3 for 3D. Ensure this matches app_settings.plot_dimensions
+  metric: "cosine" # UMAP metric
+  random_state: 42 # For reproducibility
+
+faiss_params:
+  # For cosine similarity with normalized embeddings, IndexFlatIP is appropriate.
+  # sentence-transformers models usually output normalized embeddings.
+  index_type: "IndexFlatIP"
+
+app_settings:
+  default_top_k: 10
+  plot_point_size: 5
+  plot_dimensions: 2 # 2 for 2D, 3 for 3D. Must match umap_params.n_components
+  max_abstract_length_display: 500 # Max characters of abstract to show in UI
+  title: "Semantic Article Explorer"

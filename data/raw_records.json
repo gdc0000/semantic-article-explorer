@@ -1,0 +1,242 @@
+[
+  {
+    "id": "article_1",
+    "title": "Introduction to Deep Learning",
+    "abstract": "A comprehensive overview of deep learning techniques, including convolutional neural networks and recurrent neural networks.",
+    "year": 2018,
+    "journal": "Journal of Artificial Intelligence",
+    "authors": ["Goodfellow, Ian", "Bengio, Yoshua", "Courville, Aaron"]
+  },
+  {
+    "id": "article_2",
+    "title": "Natural Language Processing with Transformers",
+    "abstract": "Exploring the use of transformer models for natural language understanding and generation tasks.",
+    "year": 2020,
+    "journal": "Transactions on Machine Learning Research",
+    "authors": ["Vaswani, Ashish", "Shazeer, Noam", "Parmar, Niki"]
+  },
+  {
+    "id": "article_3",
+    "title": "Reinforcement Learning Algorithms",
+    "abstract": "A survey of different reinforcement learning algorithms, including Q-learning, SARSA, and policy gradient methods.",
+    "year": 2015,
+    "journal": "Machine Learning Journal",
+    "authors": ["Sutton, Richard S.", "Barto, Andrew G."]
+  },
+  {
+    "id": "article_4",
+    "title": "Computer Vision: Object Detection",
+    "abstract": "Techniques for object detection in images, including YOLO, Faster R-CNN, and SSD.",
+    "year": 2017,
+    "journal": "International Journal of Computer Vision",
+    "authors": ["Redmon, Joseph", "Divvala, Santosh", "Girshick, Ross"]
+  },
+  {
+    "id": "article_5",
+    "title": "Generative Adversarial Networks (GANs)",
+    "abstract": "Introduction to GANs and their applications in image generation and data augmentation.",
+    "year": 2014,
+    "journal": "Neural Information Processing Systems",
+    "authors": ["Goodfellow, Ian", "Pouget-Abadie, Jean", "Mirza, Mehdi"]
+  },
+  {
+    "id": "article_6",
+    "title": "Deep Learning for Image Recognition",
+    "abstract": "Applying deep learning models to image recognition tasks, achieving state-of-the-art results.",
+    "year": 2019,
+    "journal": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "authors": ["Krizhevsky, Alex", "Sutskever, Ilya", "Hinton, Geoffrey E."]
+  },
+  {
+    "id": "article_7",
+    "title": "Transformer-Based Language Models",
+    "abstract": "A detailed analysis of transformer architectures and their impact on language modeling.",
+    "year": 2021,
+    "journal": "Journal of Machine Learning Research",
+    "authors": ["Brown, Tom B.", "Mann, Benjamin", "Ryder, Nick"]
+  },
+  {
+    "id": "article_8",
+    "title": "Monte Carlo Tree Search",
+    "abstract": "An overview of Monte Carlo Tree Search (MCTS) and its applications in game playing and decision-making.",
+    "year": 2006,
+    "journal": "IEEE Transactions on Computational Intelligence and AI in Games",
+    "authors": ["Coulom, Rémi"]
+  },
+  {
+    "id": "article_9",
+    "title": "Semantic Segmentation with Deep Learning",
+    "abstract": "Techniques for semantic segmentation in images using deep learning models.",
+    "year": 2016,
+    "journal": "Computer Vision and Pattern Recognition",
+    "authors": ["Long, Jonathan", "Shelhamer, Evan", "Darrell, Trevor"]
+  },
+  {
+    "id": "article_10",
+    "title": "Variational Autoencoders (VAEs)",
+    "abstract": "Introduction to VAEs and their applications in data generation and representation learning.",
+    "year": 2013,
+    "journal": "International Conference on Learning Representations",
+    "authors": ["Kingma, Diederik P.", "Welling, Max"]
+  },
+  {
+    "id": "article_11",
+    "title": "Graph Neural Networks",
+    "abstract": "Learning representations on graph-structured data using neural networks.",
+    "year": 2018,
+    "journal": "Advances in Neural Information Processing Systems",
+    "authors": ["Scarselli, Franco", "Gori, Marco", "Tsoi, Ah Chung"]
+  },
+  {
+    "id": "article_12",
+    "title": "BERT: Pre-training of Deep Bidirectional Transformers",
+    "abstract": "Introducing BERT, a new language representation model based on bidirectional transformers.",
+    "year": 2018,
+    "journal": "North American Chapter of the Association for Computational Linguistics",
+    "authors": ["Devlin, Jacob", "Chang, Ming-Wei", "Lee, Kenton"]
+  },
+  {
+    "id": "article_13",
+    "title": "Deep Reinforcement Learning",
+    "abstract": "Combining deep learning with reinforcement learning for solving complex decision-making problems.",
+    "year": 2015,
+    "journal": "Communications of the ACM",
+    "authors": ["Mnih, Volodymyr", "Kavukcuoglu, Koray", "Silver, David"]
+  },
+  {
+    "id": "article_14",
+    "title": "Convolutional Neural Networks for Image Classification",
+    "abstract": "Applying convolutional neural networks to image classification tasks.",
+    "year": 2012,
+    "journal": "Neural Information Processing Systems",
+    "authors": ["Krizhevsky, Alex", "Sutskever, Ilya", "Hinton, Geoffrey E."]
+  },
+  {
+    "id": "article_15",
+    "title": "Attention Mechanism in Neural Networks",
+    "abstract": "Exploring the attention mechanism and its role in improving neural network performance.",
+    "year": 2017,
+    "journal": "International Conference on Learning Representations",
+    "authors": ["Bahdanau, Dzmitry", "Cho, Kyunghyun", "Bengio, Yoshua"]
+  },
+  {
+    "id": "article_16",
+    "title": "Domain Adaptation with Deep Learning",
+    "abstract": "Techniques for adapting deep learning models to new domains with limited labeled data.",
+    "year": 2015,
+    "journal": "Journal of Machine Learning Research",
+    "authors": ["Ganin, Yaroslav", "Lempitsky, Victor"]
+  },
+  {
+    "id": "article_17",
+    "title": "Meta-Learning Algorithms",
+    "abstract": "An overview of meta-learning algorithms and their applications in few-shot learning.",
+    "year": 2017,
+    "journal": "International Conference on Machine Learning",
+    "authors": ["Finn, Chelsea", "Abbeel, Pieter", "Levine, Sergey"]
+  },
+  {
+    "id": "article_18",
+    "title": "Unsupervised Learning with Autoencoders",
+    "abstract": "Applying autoencoders for unsupervised learning tasks, such as dimensionality reduction and feature extraction.",
+    "year": 2006,
+    "journal": "Science",
+    "authors": ["Hinton, Geoffrey E.", "Salakhutdinov, Ruslan R."]
+  },
+   {
+    "id": "article_19",
+    "title": "Quantum Machine Learning",
+    "abstract": "An introductory overview of the intersection of quantum computing and machine learning.",
+    "year": 2023,
+    "journal": "Nature Physics",
+    "authors": ["Biamonte, Jacob", "Wittek, Peter", "Bromley, Michael"]
+  },
+  {
+    "id": "article_20",
+    "title": "Explainable AI (XAI) Techniques",
+    "abstract": "Methods for making AI decision-making more transparent and interpretable.",
+    "year": 2019,
+    "journal": "Communications of the ACM",
+    "authors": ["Guidotti, Riccardo", "Monreale, Anna", "Ruggieri, Salvatore"]
+  },
+  {
+    "id": "article_21",
+    "title": "Federated Learning",
+    "abstract": "A distributed machine learning approach that enables training models on decentralized data.",
+    "year": 2017,
+    "journal": "Journal of Machine Learning Research",
+    "authors": ["McMahan, Brendan", "Moore, Eider", "Ramage, Daniel"]
+  },
+  {
+    "id": "article_22",
+    "title": "Time Series Forecasting with LSTMs",
+    "abstract": "Predicting future values in time series data using long short-term memory (LSTM) networks.",
+    "year": 1997,
+    "journal": "Neural Computation",
+    "authors": ["Hochreiter, Sepp", "Schmidhuber, Jürgen"]
+  },
+  {
+    "id": "article_23",
+    "title": "Object Tracking in Videos",
+    "abstract": "Algorithms for tracking objects across consecutive frames in a video sequence.",
+    "year": 2016,
+    "journal": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "authors": ["Yilmaz, Alper", "Javed, Omar", "Shah, Mubarak"]
+  },
+  {
+    "id": "article_24",
+    "title": "Recommender Systems",
+    "abstract": "Overview of algorithms to recommend items to users.",
+    "year": 2005,
+    "journal": "AI Magazine",
+    "authors": ["Resnick, Paul", "Varian, Hal R."]
+  },
+  {
+    "id": "article_25",
+    "title": "Bayesian Optimization",
+    "abstract": "A sequential design strategy for global optimization of black-box functions.",
+    "year": 2010,
+    "journal": "Journal of Global Optimization",
+    "authors": ["Mockus, Jonas"]
+  },
+  {
+    "id": "article_26",
+    "title": "Self-Supervised Learning",
+    "abstract": "Training models on unlabeled data by creating pseudo-labels using the data itself.",
+    "year": 2020,
+    "journal": "Foundations and Trends in Machine Learning",
+    "authors": ["Jing, Longhui", "Tian, Yaojie", "Liu, Hang"]
+  },
+  {
+    "id": "article_27",
+    "title": "Adversarial Attacks and Defenses in Deep Learning",
+    "abstract": "Methods to craft adversarial examples that fool deep neural networks and defenses against these attacks.",
+    "year": 2013,
+    "journal": "International Conference on Learning Representations",
+    "authors": ["Szegedy, Christian", "Zaremba, Wojciech", "Sutskever, Ilya"]
+  },
+  {
+    "id": "article_28",
+    "title": "Active Learning",
+    "abstract": "An iterative process where the learning algorithm actively chooses the data from which it learns.",
+    "year": 1994,
+    "journal": "Machine Learning",
+    "authors": ["Cohn, David A.", "Ghahramani, Zoubin", "Jordan, Michael I."]
+  },
+  {
+    "id": "article_29",
+    "title": "Capsule Networks",
+    "abstract": "A novel neural network architecture for representing hierarchical relationships.",
+    "year": 2017,
+    "journal": "Neural Information Processing Systems",
+    "authors": ["Sabour, Sara", "Frosst, Nicholas", "Hinton, Geoffrey E."]
+  },
+  {
+    "id": "article_30",
+    "title": "Knowledge Graphs",
+    "abstract": "Representation of knowledge as a graph of entities and their relationships.",
+    "year": 2012,
+    "journal": "Communications of the ACM",
+    "authors": ["Ehrlinger, Lisa", "Wöß, Wolfram"]
+  }
+]
