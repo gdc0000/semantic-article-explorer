@@ -8,12 +8,12 @@ import torch # For checking CUDA availability
 from pathlib import Path
 
 # Get the parent directory of the current script
-parent_dir = Path(__file__).parent.parent
+# parent_dir = Path(__file__).parent.parent parent_dir /
 
 # Configure basic logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-def load_config(config_path=parent_dir / "config.yaml"):
+def load_config(config_path= "config.yaml"):
     """Loads the YAML configuration file."""
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
