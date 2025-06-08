@@ -1,242 +1,893 @@
-[
-  {
+ [
+    {
     "id": "article_1",
     "title": "Introduction to Deep Learning",
-    "abstract": "A comprehensive overview of deep learning techniques, including convolutional neural networks and recurrent neural networks.",
+    "abstract": "A comprehensive overview of deep learning techniques.",
     "year": 2018,
-    "journal": "Journal of Artificial Intelligence",
-    "authors": ["Goodfellow, Ian", "Bengio, Yoshua", "Courville, Aaron"]
+    "journal": "Journal of AI",
+    "x": 0.1,
+    "y": 0.2
   },
   {
     "id": "article_2",
     "title": "Natural Language Processing with Transformers",
-    "abstract": "Exploring the use of transformer models for natural language understanding and generation tasks.",
+    "abstract": "Using transformers for NLP tasks.",
     "year": 2020,
-    "journal": "Transactions on Machine Learning Research",
-    "authors": ["Vaswani, Ashish", "Shazeer, Noam", "Parmar, Niki"]
+    "journal": "Transactions on ML Research",
+    "x": 0.5,
+    "y": 0.8
   },
   {
     "id": "article_3",
-    "title": "Reinforcement Learning Algorithms",
-    "abstract": "A survey of different reinforcement learning algorithms, including Q-learning, SARSA, and policy gradient methods.",
-    "year": 2015,
-    "journal": "Machine Learning Journal",
-    "authors": ["Sutton, Richard S.", "Barto, Andrew G."]
+    "title": "Generative Adversarial Networks",
+    "abstract": "GANs for image synthesis and data augmentation.",
+    "year": 2019,
+    "journal": "Neural Networks Journal",
+    "x": 0.9,
+    "y": 0.3
   },
   {
     "id": "article_4",
-    "title": "Computer Vision: Object Detection",
-    "abstract": "Techniques for object detection in images, including YOLO, Faster R-CNN, and SSD.",
-    "year": 2017,
-    "journal": "International Journal of Computer Vision",
-    "authors": ["Redmon, Joseph", "Divvala, Santosh", "Girshick, Ross"]
+    "title": "The Architecture of Modern Computer Processors",
+    "abstract": "An in-depth look at CPU design and functionality.",
+    "year": 2021,
+    "journal": "IEEE Micro",
+    "x": 0.2,
+    "y": 0.4
   },
   {
     "id": "article_5",
-    "title": "Generative Adversarial Networks (GANs)",
-    "abstract": "Introduction to GANs and their applications in image generation and data augmentation.",
-    "year": 2014,
-    "journal": "Neural Information Processing Systems",
-    "authors": ["Goodfellow, Ian", "Pouget-Abadie, Jean", "Mirza, Mehdi"]
+    "title": "Introduction to Quantum Computing",
+    "abstract": "Exploring the principles and applications of quantum computing.",
+    "year": 2022,
+    "journal": "Quantum Information Processing",
+    "x": 0.7,
+    "y": 0.6
   },
   {
     "id": "article_6",
-    "title": "Deep Learning for Image Recognition",
-    "abstract": "Applying deep learning models to image recognition tasks, achieving state-of-the-art results.",
-    "year": 2019,
-    "journal": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
-    "authors": ["Krizhevsky, Alex", "Sutskever, Ilya", "Hinton, Geoffrey E."]
+    "title": "Computer Vision: Algorithms and Applications",
+    "abstract": "A review of computer vision techniques and their uses.",
+    "year": 2017,
+    "journal": "International Journal of Computer Vision",
+    "x": 0.4,
+    "y": 0.1
   },
   {
     "id": "article_7",
-    "title": "Transformer-Based Language Models",
-    "abstract": "A detailed analysis of transformer architectures and their impact on language modeling.",
-    "year": 2021,
-    "journal": "Journal of Machine Learning Research",
-    "authors": ["Brown, Tom B.", "Mann, Benjamin", "Ryder, Nick"]
+    "title": "Cybersecurity Threats and Defense Mechanisms",
+    "abstract": "An analysis of cyber threats and security solutions.",
+    "year": 2023,
+    "journal": "Computer Security Journal",
+    "x": 0.8,
+    "y": 0.9
   },
   {
     "id": "article_8",
-    "title": "Monte Carlo Tree Search",
-    "abstract": "An overview of Monte Carlo Tree Search (MCTS) and its applications in game playing and decision-making.",
-    "year": 2006,
-    "journal": "IEEE Transactions on Computational Intelligence and AI in Games",
-    "authors": ["Coulom, Rémi"]
+    "title": "Data Structures and Algorithms",
+    "abstract": "Fundamentals of data structures and algorithmic analysis.",
+    "year": 2016,
+    "journal": "Journal of Algorithms",
+    "x": 0.3,
+    "y": 0.5
   },
   {
     "id": "article_9",
-    "title": "Semantic Segmentation with Deep Learning",
-    "abstract": "Techniques for semantic segmentation in images using deep learning models.",
-    "year": 2016,
-    "journal": "Computer Vision and Pattern Recognition",
-    "authors": ["Long, Jonathan", "Shelhamer, Evan", "Darrell, Trevor"]
+    "title": "Cloud Computing Technologies",
+    "abstract": "Overview of cloud computing services and architecture.",
+    "year": 2020,
+    "journal": "Cloud Computing",
+    "x": 0.6,
+    "y": 0.2
   },
   {
     "id": "article_10",
-    "title": "Variational Autoencoders (VAEs)",
-    "abstract": "Introduction to VAEs and their applications in data generation and representation learning.",
-    "year": 2013,
-    "journal": "International Conference on Learning Representations",
-    "authors": ["Kingma, Diederik P.", "Welling, Max"]
+    "title": "Blockchain Technology and Applications",
+    "abstract": "Exploring the applications of blockchain beyond cryptocurrencies.",
+    "year": 2022,
+    "journal": "Blockchain Research",
+    "x": 0.1,
+    "y": 0.7
   },
   {
     "id": "article_11",
-    "title": "Graph Neural Networks",
-    "abstract": "Learning representations on graph-structured data using neural networks.",
+    "title": "Introduction to Cognitive Psychology",
+    "abstract": "An introduction to the study of mental processes.",
     "year": 2018,
-    "journal": "Advances in Neural Information Processing Systems",
-    "authors": ["Scarselli, Franco", "Gori, Marco", "Tsoi, Ah Chung"]
+    "journal": "Journal of Cognitive Psychology",
+    "x": 0.9,
+    "y": 0.8
   },
   {
     "id": "article_12",
-    "title": "BERT: Pre-training of Deep Bidirectional Transformers",
-    "abstract": "Introducing BERT, a new language representation model based on bidirectional transformers.",
-    "year": 2018,
-    "journal": "North American Chapter of the Association for Computational Linguistics",
-    "authors": ["Devlin, Jacob", "Chang, Ming-Wei", "Lee, Kenton"]
+    "title": "Memory and Forgetting",
+    "abstract": "Exploring the mechanisms of human memory.",
+    "year": 2019,
+    "journal": "Memory & Cognition",
+    "x": 0.2,
+    "y": 0.3
   },
   {
     "id": "article_13",
-    "title": "Deep Reinforcement Learning",
-    "abstract": "Combining deep learning with reinforcement learning for solving complex decision-making problems.",
-    "year": 2015,
-    "journal": "Communications of the ACM",
-    "authors": ["Mnih, Volodymyr", "Kavukcuoglu, Koray", "Silver, David"]
+    "title": "Social Psychology of Group Behavior",
+    "abstract": "An overview of group dynamics and social influence.",
+    "year": 2020,
+    "journal": "Journal of Personality and Social Psychology",
+    "x": 0.5,
+    "y": 0.6
   },
   {
     "id": "article_14",
-    "title": "Convolutional Neural Networks for Image Classification",
-    "abstract": "Applying convolutional neural networks to image classification tasks.",
-    "year": 2012,
-    "journal": "Neural Information Processing Systems",
-    "authors": ["Krizhevsky, Alex", "Sutskever, Ilya", "Hinton, Geoffrey E."]
+    "title": "The Psychology of Emotion",
+    "abstract": "Exploring the different theories of emotion.",
+    "year": 2021,
+    "journal": "Emotion Review",
+    "x": 0.7,
+    "y": 0.1
   },
   {
     "id": "article_15",
-    "title": "Attention Mechanism in Neural Networks",
-    "abstract": "Exploring the attention mechanism and its role in improving neural network performance.",
+    "title": "Developmental Psychology: Childhood and Adolescence",
+    "abstract": "A study of human development across the lifespan.",
     "year": 2017,
-    "journal": "International Conference on Learning Representations",
-    "authors": ["Bahdanau, Dzmitry", "Cho, Kyunghyun", "Bengio, Yoshua"]
+    "journal": "Child Development",
+    "x": 0.4,
+    "y": 0.9
   },
   {
     "id": "article_16",
-    "title": "Domain Adaptation with Deep Learning",
-    "abstract": "Techniques for adapting deep learning models to new domains with limited labeled data.",
-    "year": 2015,
-    "journal": "Journal of Machine Learning Research",
-    "authors": ["Ganin, Yaroslav", "Lempitsky, Victor"]
+    "title": "Cognitive Behavioral Therapy (CBT)",
+    "abstract": "Principles and applications of CBT in mental health.",
+    "year": 2023,
+    "journal": "Behaviour Research and Therapy",
+    "x": 0.8,
+    "y": 0.2
   },
   {
     "id": "article_17",
-    "title": "Meta-Learning Algorithms",
-    "abstract": "An overview of meta-learning algorithms and their applications in few-shot learning.",
-    "year": 2017,
-    "journal": "International Conference on Machine Learning",
-    "authors": ["Finn, Chelsea", "Abbeel, Pieter", "Levine, Sergey"]
+    "title": "The Psychology of Language",
+    "abstract": "Exploring the cognitive processes of language.",
+    "year": 2016,
+    "journal": "Journal of Psycholinguistic Research",
+    "x": 0.3,
+    "y": 0.5
   },
   {
     "id": "article_18",
-    "title": "Unsupervised Learning with Autoencoders",
-    "abstract": "Applying autoencoders for unsupervised learning tasks, such as dimensionality reduction and feature extraction.",
-    "year": 2006,
-    "journal": "Science",
-    "authors": ["Hinton, Geoffrey E.", "Salakhutdinov, Ruslan R."]
+    "title": "Personality Psychology: Theories and Assessment",
+    "abstract": "A review of personality theories.",
+    "year": 2022,
+    "journal": "Journal of Personality Assessment",
+    "x": 0.6,
+    "y": 0.7
   },
-   {
+  {
     "id": "article_19",
-    "title": "Quantum Machine Learning",
-    "abstract": "An introductory overview of the intersection of quantum computing and machine learning.",
-    "year": 2023,
-    "journal": "Nature Physics",
-    "authors": ["Biamonte, Jacob", "Wittek, Peter", "Bromley, Michael"]
+    "title": "Abnormal Psychology: Psychopathology and Treatment",
+    "abstract": "An overview of psychological disorders.",
+    "year": 2019,
+    "journal": "Clinical Psychology Review",
+    "x": 0.1,
+    "y": 0.2
   },
   {
     "id": "article_20",
-    "title": "Explainable AI (XAI) Techniques",
-    "abstract": "Methods for making AI decision-making more transparent and interpretable.",
-    "year": 2019,
-    "journal": "Communications of the ACM",
-    "authors": ["Guidotti, Riccardo", "Monreale, Anna", "Ruggieri, Salvatore"]
+    "title": "Neuropsychology: The Brain and Behavior",
+    "abstract": "The relationship between brain and behaviour.",
+    "year": 2020,
+    "journal": "Neuropsychologia",
+    "x": 0.2,
+    "y": 0.8
   },
   {
     "id": "article_21",
-    "title": "Federated Learning",
-    "abstract": "A distributed machine learning approach that enables training models on decentralized data.",
-    "year": 2017,
-    "journal": "Journal of Machine Learning Research",
-    "authors": ["McMahan, Brendan", "Moore, Eider", "Ramage, Daniel"]
+    "title": "Advanced Deep Learning Architectures",
+    "abstract": "A deep dive into advanced deep learning models.",
+    "year": 2023,
+    "journal": "Neural Networks",
+    "x": 0.3,
+    "y": 0.4
   },
   {
     "id": "article_22",
-    "title": "Time Series Forecasting with LSTMs",
-    "abstract": "Predicting future values in time series data using long short-term memory (LSTM) networks.",
-    "year": 1997,
-    "journal": "Neural Computation",
-    "authors": ["Hochreiter, Sepp", "Schmidhuber, Jürgen"]
+    "title": "Reinforcement Learning and Its Applications",
+    "abstract": "Exploring reinforcement learning in AI.",
+    "year": 2021,
+    "journal": "Machine Learning",
+    "x": 0.5,
+    "y": 0.3
   },
   {
     "id": "article_23",
-    "title": "Object Tracking in Videos",
-    "abstract": "Algorithms for tracking objects across consecutive frames in a video sequence.",
-    "year": 2016,
-    "journal": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
-    "authors": ["Yilmaz, Alper", "Javed, Omar", "Shah, Mubarak"]
+    "title": "Ethical Considerations in AI",
+    "abstract": "Addressing ethical issues in artificial intelligence.",
+    "year": 2022,
+    "journal": "AI Ethics",
+    "x": 0.7,
+    "y": 0.6
   },
   {
     "id": "article_24",
-    "title": "Recommender Systems",
-    "abstract": "Overview of algorithms to recommend items to users.",
-    "year": 2005,
-    "journal": "AI Magazine",
-    "authors": ["Resnick, Paul", "Varian, Hal R."]
+    "title": "Distributed Systems: Concepts and Design",
+    "abstract": "Principles of distributed systems.",
+    "year": 2019,
+    "journal": "Distributed Computing",
+    "x": 0.8,
+    "y": 0.1
   },
   {
     "id": "article_25",
-    "title": "Bayesian Optimization",
-    "abstract": "A sequential design strategy for global optimization of black-box functions.",
-    "year": 2010,
-    "journal": "Journal of Global Optimization",
-    "authors": ["Mockus, Jonas"]
+    "title": "The Future of Software Engineering",
+    "abstract": "Trends and predictions in software development.",
+    "year": 2018,
+    "journal": "Software Engineering Journal",
+    "x": 0.4,
+    "y": 0.9
   },
   {
     "id": "article_26",
-    "title": "Self-Supervised Learning",
-    "abstract": "Training models on unlabeled data by creating pseudo-labels using the data itself.",
+    "title": "Human-Computer Interaction Design",
+    "abstract": "Designing user-friendly interfaces.",
     "year": 2020,
-    "journal": "Foundations and Trends in Machine Learning",
-    "authors": ["Jing, Longhui", "Tian, Yaojie", "Liu, Hang"]
+    "journal": "International Journal of Human-Computer Studies",
+    "x": 0.6,
+    "y": 0.2
   },
   {
     "id": "article_27",
-    "title": "Adversarial Attacks and Defenses in Deep Learning",
-    "abstract": "Methods to craft adversarial examples that fool deep neural networks and defenses against these attacks.",
-    "year": 2013,
-    "journal": "International Conference on Learning Representations",
-    "authors": ["Szegedy, Christian", "Zaremba, Wojciech", "Sutskever, Ilya"]
+    "title": "Database Management Systems: Theory and Practice",
+    "abstract": "Database systems and their uses.",
+    "year": 2017,
+    "journal": "Information Systems",
+    "x": 0.1,
+    "y": 0.7
   },
   {
     "id": "article_28",
-    "title": "Active Learning",
-    "abstract": "An iterative process where the learning algorithm actively chooses the data from which it learns.",
-    "year": 1994,
-    "journal": "Machine Learning",
-    "authors": ["Cohn, David A.", "Ghahramani, Zoubin", "Jordan, Michael I."]
+    "title": "Computer Graphics: Rendering and Visualization",
+    "abstract": "Techniques in computer graphics.",
+    "year": 2023,
+    "journal": "ACM Transactions on Graphics",
+    "x": 0.2,
+    "y": 0.5
   },
   {
     "id": "article_29",
-    "title": "Capsule Networks",
-    "abstract": "A novel neural network architecture for representing hierarchical relationships.",
-    "year": 2017,
-    "journal": "Neural Information Processing Systems",
-    "authors": ["Sabour, Sara", "Frosst, Nicholas", "Hinton, Geoffrey E."]
+    "title": "Operating Systems: Internals and Design",
+    "abstract": "The inner workings of operating systems.",
+    "year": 2016,
+    "journal": "Operating Systems Review",
+    "x": 0.9,
+    "y": 0.8
   },
   {
     "id": "article_30",
-    "title": "Knowledge Graphs",
-    "abstract": "Representation of knowledge as a graph of entities and their relationships.",
-    "year": 2012,
-    "journal": "Communications of the ACM",
-    "authors": ["Ehrlinger, Lisa", "Wöß, Wolfram"]
+    "title": "Wireless Communication Protocols",
+    "abstract": "Overview of wireless communication protocols.",
+    "year": 2022,
+    "journal": "IEEE Transactions on Wireless Communications",
+    "x": 0.3,
+    "y": 0.1
+  },
+  {
+    "id": "article_31",
+    "title": "Attention and Consciousness",
+    "abstract": "Exploring the cognitive processes of attention.",
+    "year": 2023,
+    "journal": "Trends in Cognitive Sciences",
+    "x": 0.5,
+    "y": 0.4
+  },
+  {
+    "id": "article_32",
+    "title": "Theories of Intelligence",
+    "abstract": "Different theories about human intelligence.",
+    "year": 2021,
+    "journal": "Intelligence",
+    "x": 0.7,
+    "y": 0.3
+  },
+  {
+    "id": "article_33",
+    "title": "Positive Psychology and Well-being",
+    "abstract": "The science of happiness and well-being.",
+    "year": 2019,
+    "journal": "Journal of Happiness Studies",
+    "x": 0.8,
+    "y": 0.6
+  },
+  {
+    "id": "article_34",
+    "title": "Stress and Coping Mechanisms",
+    "abstract": "Psychological aspects of stress.",
+    "year": 2018,
+    "journal": "Stress and Health",
+    "x": 0.4,
+    "y": 0.1
+  },
+  {
+    "id": "article_35",
+    "title": "Clinical Neuropsychology",
+    "abstract": "Applying neuropsychology to the study of brain disorders.",
+    "year": 2020,
+    "journal": "Journal of Clinical and Experimental Neuropsychology",
+    "x": 0.6,
+    "y": 0.9
+  },
+  {
+    "id": "article_36",
+    "title": "The Psychology of Motivation",
+    "abstract": "Exploring theories of motivation.",
+    "year": 2017,
+    "journal": "Motivation and Emotion",
+    "x": 0.1,
+    "y": 0.2
+  },
+  {
+    "id": "article_37",
+    "title": "Cross-cultural Psychology",
+    "abstract": "The influence of culture on behaviour.",
+    "year": 2022,
+    "journal": "Journal of Cross-Cultural Psychology",
+    "x": 0.2,
+    "y": 0.7
+  },
+  {
+    "id": "article_38",
+    "title": "Forensic Psychology",
+    "abstract": "Psychology applied to legal and criminal justice.",
+    "year": 2016,
+    "journal": "Law and Human Behavior",
+    "x": 0.9,
+    "y": 0.5
+  },
+  {
+    "id": "article_39",
+    "title": "Group Therapy and Interpersonal Dynamics",
+    "abstract": "Therapeutic group interactions.",
+    "year": 2023,
+    "journal": "International Journal of Group Psychotherapy",
+    "x": 0.3,
+    "y": 0.1
+  },
+  {
+    "id": "article_40",
+    "title": "Cognitive Development in Children",
+    "abstract": "Examining the development of cognitive abilities.",
+    "year": 2021,
+    "journal": "Cognitive Development",
+    "x": 0.5,
+    "y": 0.8
+  },
+    {
+    "id": "article_41",
+    "title": "Advanced Topics in Computer Networks",
+    "abstract": "In-depth exploration of computer networking concepts.",
+    "year": 2024,
+    "journal": "IEEE Network",
+    "x": 0.1,
+    "y": 0.2
+  },
+  {
+    "id": "article_42",
+    "title": "Parallel Computing and Multiprocessing",
+    "abstract": "Principles and applications of parallel processing.",
+    "year": 2024,
+    "journal": "Parallel Computing",
+    "x": 0.5,
+    "y": 0.8
+  },
+  {
+    "id": "article_43",
+    "title": "Embedded Systems and IoT",
+    "abstract": "Designing and implementing embedded systems.",
+    "year": 2024,
+    "journal": "Journal of Embedded Systems",
+    "x": 0.9,
+    "y": 0.3
+  },
+  {
+    "id": "article_44",
+    "title": "Computer Architecture and Organization",
+    "abstract": "Understanding computer system architecture.",
+    "year": 2024,
+    "journal": "Computer Architecture Letters",
+    "x": 0.2,
+    "y": 0.4
+  },
+  {
+    "id": "article_45",
+    "title": "Software Security and Vulnerability Analysis",
+    "abstract": "Analyzing and mitigating software vulnerabilities.",
+    "year": 2024,
+    "journal": "IEEE Transactions on Software Engineering",
+    "x": 0.7,
+    "y": 0.6
+  },
+  {
+    "id": "article_46",
+    "title": "Big Data Analytics and Machine Learning",
+    "abstract": "Utilizing machine learning for big data analysis.",
+    "year": 2024,
+    "journal": "Journal of Big Data",
+    "x": 0.4,
+    "y": 0.1
+  },
+  {
+    "id": "article_47",
+    "title": "Digital Forensics and Incident Response",
+    "abstract": "Techniques for digital forensics and incident response.",
+    "year": 2024,
+    "journal": "Digital Investigation",
+    "x": 0.8,
+    "y": 0.9
+  },
+  {
+    "id": "article_48",
+    "title": "Artificial Intelligence and Robotics",
+    "abstract": "The intersection of AI and robotics.",
+    "year": 2024,
+    "journal": "Robotics and Autonomous Systems",
+    "x": 0.3,
+    "y": 0.5
+  },
+  {
+    "id": "article_49",
+    "title": "Formal Methods in Software Development",
+    "abstract": "Using formal methods for software development.",
+    "year": 2024,
+    "journal": "Formal Aspects of Computing",
+    "x": 0.6,
+    "y": 0.2
+  },
+  {
+    "id": "article_50",
+    "title": "Human-Centered AI",
+    "abstract": "Developing AI systems focused on human needs.",
+    "year": 2024,
+    "journal": "AI Magazine",
+    "x": 0.1,
+    "y": 0.7
+  },
+  {
+    "id": "article_51",
+    "title": "The Neuroscience of Learning",
+    "abstract": "Exploring the neural basis of learning and memory.",
+    "year": 2024,
+    "journal": "Learning & Memory",
+    "x": 0.2,
+    "y": 0.3
+  },
+  {
+    "id": "article_52",
+    "title": "The Psychology of Decision-Making",
+    "abstract": "Investigating the cognitive processes behind decisions.",
+    "year": 2024,
+    "journal": "Journal of Behavioral Decision Making",
+    "x": 0.9,
+    "y": 0.8
+  },
+  {
+    "id": "article_53",
+    "title": "Emotional Intelligence and Leadership",
+    "abstract": "The role of emotional intelligence in leadership.",
+    "year": 2024,
+    "journal": "Leadership Quarterly",
+    "x": 0.3,
+    "y": 0.1
+  },
+  {
+    "id": "article_54",
+    "title": "The Psychology of Advertising",
+    "abstract": "Analyzing the impact of advertising on consumer behavior.",
+    "year": 2024,
+    "journal": "Journal of Consumer Psychology",
+    "x": 0.5,
+    "y": 0.6
+  },
+  {
+    "id": "article_55",
+    "title": "Psychological Assessment and Testing",
+    "abstract": "Principles and practices of psychological assessment.",
+    "year": 2024,
+    "journal": "Psychological Assessment",
+    "x": 0.7,
+    "y": 0.1
+  },
+  {
+    "id": "article_56",
+    "title": "The Psychology of Happiness",
+    "abstract": "Research on the causes and correlates of happiness.",
+    "year": 2024,
+    "journal": "Journal of Happiness Studies",
+    "x": 0.8,
+    "y": 0.2
+  },
+  {
+    "id": "article_57",
+    "title": "Cognitive Impairments in Aging",
+    "abstract": "Cognitive changes associated with aging.",
+    "year": 2024,
+    "journal": "The Journals of Gerontology: Psychological Sciences and Social Sciences",
+    "x": 0.4,
+    "y": 0.9
+  },
+  {
+    "id": "article_58",
+    "title": "The Psychology of Trauma",
+    "abstract": "Understanding the psychological effects of trauma.",
+    "year": 2024,
+    "journal": "Trauma",
+    "x": 0.6,
+    "y": 0.7
+  },
+  {
+    "id": "article_59",
+    "title": "Family Systems Therapy",
+    "abstract": "Principles and practices of family therapy.",
+    "year": 2024,
+    "journal": "Journal of Marital and Family Therapy",
+    "x": 0.1,
+    "y": 0.2
+  },
+  {
+    "id": "article_60",
+    "title": "The Psychology of Workplace Behavior",
+    "abstract": "Understanding behaviour in organizational settings.",
+    "year": 2024,
+    "journal": "Journal of Applied Psychology",
+    "x": 0.2,
+    "y": 0.8
+  },
+  {
+    "id": "article_61",
+    "title": "Computer Ethics: Moral Issues in Computing",
+    "abstract": "Ethical implications of computer technology.",
+    "year": 2024,
+    "journal": "Ethics and Information Technology",
+    "x": 0.3,
+    "y": 0.4
+  },
+  {
+    "id": "article_62",
+    "title": "Parallel Algorithm Design",
+    "abstract": "Designing algorithms for parallel computation.",
+    "year": 2024,
+    "journal": "IEEE Transactions on Parallel and Distributed Systems",
+    "x": 0.5,
+    "y": 0.3
+  },
+  {
+    "id": "article_63",
+    "title": "Cyber-Physical Systems Security",
+    "abstract": "Security issues in cyber-physical systems.",
+    "year": 2024,
+    "journal": "Cyber-Physical Systems",
+    "x": 0.7,
+    "y": 0.6
+  },
+  {
+    "id": "article_64",
+    "title": "Software Verification and Validation",
+    "abstract": "Techniques for software testing and verification.",
+    "year": 2024,
+    "journal": "Software Testing, Verification and Reliability",
+    "x": 0.8,
+    "y": 0.1
+  },
+  {
+    "id": "article_65",
+    "title": "Blockchain Security and Cryptography",
+    "abstract": "Security and cryptographic aspects of blockchain technology.",
+    "year": 2024,
+    "journal": "Cryptography and Security",
+    "x": 0.4,
+    "y": 0.9
+  },
+  {
+    "id": "article_66",
+    "title": "Mobile Computing and Applications",
+    "abstract": "Overview of mobile computing.",
+    "year": 2024,
+    "journal": "Mobile Networks and Applications",
+    "x": 0.6,
+    "y": 0.2
+  },
+  {
+    "id": "article_67",
+    "title": "Robotics and Automation in Manufacturing",
+    "abstract": "Robotics and automation in industrial settings.",
+    "year": 2024,
+    "journal": "Industrial Robot",
+    "x": 0.1,
+    "y": 0.7
+  },
+  {
+    "id": "article_68",
+    "title": "Network Security Protocols",
+    "abstract": "A study of network security protocols.",
+    "year": 2024,
+    "journal": "Security Protocols",
+    "x": 0.2,
+    "y": 0.5
+  },
+  {
+    "id": "article_69",
+    "title": "Data Mining Techniques and Applications",
+    "abstract": "Applications of data mining.",
+    "year": 2024,
+    "journal": "Data Mining and Knowledge Discovery",
+    "x": 0.9,
+    "y": 0.8
+  },
+  {
+    "id": "article_70",
+    "title": "Compiler Design and Optimization",
+    "abstract": "Principles of compiler design and optimization.",
+    "year": 2024,
+    "journal": "ACM Transactions on Programming Languages and Systems",
+    "x": 0.3,
+    "y": 0.1
+  },
+  {
+    "id": "article_71",
+    "title": "The Psychology of Leadership",
+    "abstract": "Exploring the psychological aspects of leadership.",
+    "year": 2024,
+    "journal": "The Leadership Quarterly",
+    "x": 0.5,
+    "y": 0.4
+  },
+  {
+    "id": "article_72",
+    "title": "The Psychology of Education",
+    "abstract": "Psychological principles applied to education.",
+    "year": 2024,
+    "journal": "Educational Psychology Review",
+    "x": 0.7,
+    "y": 0.3
+  },
+  {
+    "id": "article_73",
+    "title": "The Psychology of Sleep",
+    "abstract": "Research on sleep and its disorders.",
+    "year": 2024,
+    "journal": "Sleep",
+    "x": 0.8,
+    "y": 0.6
+  },
+  {
+    "id": "article_74",
+    "title": "The Psychology of Aging",
+    "abstract": "Psychological aspects of aging.",
+    "year": 2024,
+    "journal": "The Gerontologist",
+    "x": 0.4,
+    "y": 0.1
+  },
+  {
+    "id": "article_75",
+    "title": "The Psychology of Addiction",
+    "abstract": "Understanding addiction.",
+    "year": 2024,
+    "journal": "Addiction",
+    "x": 0.6,
+    "y": 0.9
+  },
+  {
+    "id": "article_76",
+    "title": "The Psychology of Personality Disorders",
+    "abstract": "Study of personality disorders.",
+    "year": 2024,
+    "journal": "Journal of Personality Disorders",
+    "x": 0.1,
+    "y": 0.2
+  },
+  {
+    "id": "article_77",
+    "title": "The Psychology of Parenting",
+    "abstract": "Psychological aspects of parenting.",
+    "year": 2024,
+    "journal": "Parenting",
+    "x": 0.2,
+    "y": 0.7
+  },
+  {
+    "id": "article_78",
+    "title": "The Psychology of Resilience",
+    "abstract": "Research on resilience.",
+    "year": 2024,
+    "journal": "Journal of Traumatic Stress",
+    "x": 0.9,
+    "y": 0.5
+  },
+  {
+    "id": "article_79",
+    "title": "The Psychology of Relationships",
+    "abstract": "Research on relationships.",
+    "year": 2024,
+    "journal": "Personal Relationships",
+    "x": 0.3,
+    "y": 0.1
+  },
+  {
+    "id": "article_80",
+    "title": "Positive Interventions in Therapy",
+    "abstract": "Positive interventions in psychotherapy.",
+    "year": 2024,
+    "journal": "Journal of Clinical Psychology",
+    "x": 0.5,
+    "y": 0.8
+  },
+  {
+    "id": "article_81",
+    "title": "Quantum Machine Learning",
+    "abstract": "Exploring quantum machine learning applications.",
+    "year": 2025,
+    "journal": "Quantum Information Processing",
+    "x": 0.2,
+    "y": 0.3
+  },
+  {
+    "id": "article_82",
+    "title": "Edge Computing and IoT Security",
+    "abstract": "Security aspects of edge computing and IoT.",
+    "year": 2025,
+    "journal": "IEEE Internet of Things Journal",
+    "x": 0.9,
+    "y": 0.8
+  },
+  {
+    "id": "article_83",
+    "title": "Computational Neuroscience",
+    "abstract": "Computational modeling of the brain.",
+    "year": 2025,
+    "journal": "PLoS Computational Biology",
+    "x": 0.3,
+    "y": 0.1
+  },
+    {
+    "id": "article_84",
+    "title": "Game Theory and AI",
+    "abstract": "Game theory applications in AI.",
+    "year": 2025,
+    "journal": "Games",
+    "x": 0.5,
+    "y": 0.6
+  },
+  {
+    "id": "article_85",
+    "title": "The Psychology of Motivation in the Workplace",
+    "abstract": "Motivational factors affecting employees in work environments.",
+    "year": 2025,
+    "journal": "Journal of Organizational Behavior",
+    "x": 0.7,
+    "y": 0.1
+  },
+  {
+    "id": "article_86",
+    "title": "Social Cognition and Autism Spectrum Disorder",
+    "abstract": "Cognitive processes in autism and its impact on social interactions.",
+    "year": 2025,
+    "journal": "Autism Research",
+    "x": 0.8,
+    "y": 0.2
+  },
+  {
+    "id": "article_87",
+    "title": "The Psychology of Consumer Behavior in the Digital Age",
+    "abstract": "Analyzing consumer behavior online.",
+    "year": 2025,
+    "journal": "Journal of Interactive Advertising",
+    "x": 0.4,
+    "y": 0.9
+  },
+  {
+    "id": "article_88",
+    "title": "Mindfulness-Based Interventions for Stress Reduction",
+    "abstract": "Using mindfulness to manage stress.",
+    "year": 2025,
+    "journal": "Mindfulness",
+    "x": 0.6,
+    "y": 0.7
+  },
+  {
+    "id": "article_89",
+    "title": "Virtual Reality and Cognitive Rehabilitation",
+    "abstract": "Using VR for cognitive rehabilitation.",
+    "year": 2025,
+    "journal": "CyberPsychology, Behavior, and Social Networking",
+    "x": 0.1,
+    "y": 0.2
+  },
+  {
+    "id": "article_90",
+    "title": "The Psychology of Gambling Addiction",
+    "abstract": "Psychological factors in gambling addiction.",
+    "year": 2025,
+    "journal": "Addictive Behaviors",
+    "x": 0.2,
+    "y": 0.8
+  },
+  {
+    "id": "article_91",
+    "title": "Advanced Networking Protocols",
+    "abstract": "Deep dives into advanced network protocols.",
+    "year": 2025,
+    "journal": "IEEE Communications Magazine",
+    "x": 0.3,
+    "y": 0.4
+  },
+  {
+    "id": "article_92",
+    "title": "Cryptography and Blockchain",
+    "abstract": "Cryptography used in blockchain technology.",
+    "year": 2025,
+    "journal": "Designs, Codes and Cryptography",
+    "x": 0.5,
+    "y": 0.3
+  },
+  {
+    "id": "article_93",
+    "title": "The Psychology of Sport Performance",
+    "abstract": "Applying psychological principles to enhance athletic performance.",
+    "year": 2025,
+    "journal": "Journal of Sport and Exercise Psychology",
+    "x": 0.7,
+    "y": 0.6
+  },
+  {
+    "id": "article_94",
+    "title": "Positive Psychology in Education",
+    "abstract": "Implementing positive psychology in educational settings.",
+    "year": 2025,
+    "journal": "The Journal of Positive Psychology",
+    "x": 0.8,
+    "y": 0.1
+  },
+  {
+    "id": "article_95",
+    "title": "The Psychology of Sleep Disorders",
+    "abstract": "Exploring sleep disorders and their treatments.",
+    "year": 2025,
+    "journal": "Sleep Medicine Reviews",
+    "x": 0.4,
+    "y": 0.9
+  },
+  {
+    "id": "article_96",
+    "title": "The Impact of Social Media on Mental Health",
+    "abstract": "The effects of social media on well-being.",
+    "year": 2025,
+    "journal": "Computers in Human Behavior",
+    "x": 0.6,
+    "y": 0.2
+  },
+  {
+    "id": "article_97",
+    "title": "Psychotherapy Integration and Treatment Outcomes",
+    "abstract": "Examining the outcomes of psychotherapy.",
+    "year": 2025,
+    "journal": "Psychotherapy",
+    "x": 0.1,
+    "y": 0.7
+  },
+  {
+    "id": "article_98",
+    "title": "The Psychology of Conspiracy Theories",
+    "abstract": "Psychological factors contributing to conspiracy theories.",
+    "year": 2025,
+    "journal": "Social Science & Medicine",
+    "x": 0.2,
+    "y": 0.5
+  },
+  {
+    "id": "article_99",
+    "title": "Computer Graphics Rendering Techniques",
+    "abstract": "Advanced techniques for rendering in computer graphics.",
+    "year": 2025,
+    "journal": "ACM Transactions on Graphics",
+    "x": 0.9,
+    "y": 0.8
   }
 ]

@@ -1,9 +1,9 @@
  # config.yaml
 paths:
-  raw_data: "data/raw_records.json"
-  processed_data: r"data/processed_records.parquet"
-  embeddings: r"data/embeddings.npy"
-  faiss_index: r"data/faiss_index.faiss"
+  raw_data: data/raw_records.json
+  processed_data: data/processed_records.parquet
+  embeddings: data/embeddings.npy
+  faiss_index: data/faiss_index.faiss
 
 embedding_model:
   name: "sentence-transformers/all-MiniLM-L6-v2"
