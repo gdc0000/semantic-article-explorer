@@ -5,60 +5,97 @@ import SemanticMap from './components/SemanticMap';
 import ArticleDetails from './components/ArticleDetails';
 
 function App() {
+  // State to store all articles from backend
   const [articles, setArticles] = useState([]);
+
+  // State to store the user's search input
   const [query, setQuery] = useState('');
+
+  // State to store the ID of the selected article (for details)
   const [selectedId, setSelectedId] = useState(null);
+
+  // State to store only the articles matching the current query
   const [filtered, setFiltered] = useState([]);
 
+  // 🔁 Run only once on page load: fetch initial dataset from backend
   useEffect(() => {
-    fetch('/mock_articles.json')
-      .then(res => res.json())
+    fetch("http://localhost:8000/raw-data")
+      .then(res => {
+        if (!res.ok) throw new Error("Failed to fetch initial article data");
+        return res.json(); // Convert response to JSON
+      })
       .then(data => {
-        setArticles(data);
-        setFiltered(data);
+        setArticles(data);     // Store all articles
+        setFiltered(data);     // Show all articles by default
+        console.log("✅ Loaded initial data:", data);
+      })
+      .catch(err => {
+        console.error("❌ Error fetching initial data:", err);
       });
   }, []);
 
-const handleSearch = async () => {
-  try {
-    // const response = await fetch('http://127.0.0.1:8000/search', {
-    const response = await fetch('http://localhost:8000/search', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ query }),
-    });
+  // 🔍 Called when user clicks the search button
+  const handleSearch = async () => {
+    try {
+      console.log("Sending query:", query);
 
-    if (!response.ok) throw new Error('Errore nella richiesta al backend');
+      // Send search query to FastAPI backend
+      const response = await fetch('http://localhost:8000/search', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ query }), // Wrap query in JSON
+      });
 
-    const data = await response.json();
-    // Logga i risultati ricevuti dal backend
-    console.log('Risultati ricevuti dal backend:', data.results);
+      console.log("Backend raw response:", response);
 
-    // I risultati sono stringhe, quindi filtriamo gli articoli che matchano
-    const filteredArticles = articles.filter(article =>
-      data.results.some(result =>
-        article.title.toLowerCase().includes(result.toLowerCase()) ||
-        article.abstract.toLowerCase().includes(result.toLowerCase())
-      )
-    );
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("Backend returned error:", errorText);
+        throw new Error('Failed to get results from backend');
+      }
 
-    setFiltered(filteredArticles);
-    setSelectedId(null);
-  } catch (error) {
-    console.error('Errore nel fetch:', error);
-  }
-};
+      const data = await response.json();
+      console.log("✅ Backend search results:", data.results);
 
-  const selectedArticle = articles.find(a => a.id === selectedId);
+      // Match backend result titles with full article objects
+      const filteredArticles = articles.filter(article =>
+        data.results.some(result =>
+          article.title.toLowerCase().includes(result.toLowerCase()) ||
+          article.abstract.toLowerCase().includes(result.toLowerCase())
+        )
+      );
 
+      // Update the filtered articles and reset selection
+      setFiltered(filteredArticles);
+      setSelectedId(null);
+    } catch (error) {
+      console.error("❌ Error during search fetch:", error);
+    }
+  };
+
+  // Find the full article object from its ID
+  const selectedArticle = filtered.find(a => a.id === selectedId);
+
+  // 🔧 Render the full app layout
   return (
     <div style={{ padding: '2rem' }}>
       <h1>Semantic Article Explorer</h1>
+
+      {/* Top search bar with input and button */}
       <SearchBar query={query} onChange={setQuery} onSearch={handleSearch} />
-      <SemanticMap articles={filtered} onPointClick={setSelectedId} selectedId={selectedId} />
+
+      {/* Scatterplot of filtered articles */}
+      <SemanticMap
+        articles={filtered}
+        onPointClick={setSelectedId}
+        selectedId={selectedId}
+      />
+
       <hr />
+
+      {/* Display article details when a point is clicked */}
       <ArticleDetails article={selectedArticle} />
     </div>
   );

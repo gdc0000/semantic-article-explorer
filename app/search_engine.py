@@ -15,10 +15,10 @@ query_prefix = config.get('embedding_model', {}).get('query_prefix', "")
 top_k = config['app_settings']['default_top_k']
 
 # --- Funzione principale da esporre ---
-def search_articles(query: str) -> list[str]:
+def search_articles(query: str) -> list[dict]:
     """
     Funzione principale chiamata dal backend FastAPI.
-    Esegue embedding della query, cerca su FAISS, restituisce titoli degli articoli simili.
+    Esegue embedding della query, cerca su FAISS, restituisce record completi (id, title, abstract, x, y).
     """
     query_embedding = embed_query(query, embedding_model, query_prefix)
     if query_embedding is None:
@@ -28,9 +28,23 @@ def search_articles(query: str) -> list[str]:
     if indices is None or len(indices) == 0:
         return []
 
-    results = df_articles.loc[indices]['title'].tolist()
-    logging.info(f"Query '{query}' → risultati: {results}")
+    # Recupera i record selezionati dal DataFrame
+    matched_df = df_articles.iloc[indices].copy()
+
+    # Costruisci lista di dizionari con i campi richiesti per il frontend
+    results = []
+    for _, row in matched_df.iterrows():
+        results.append({
+            "id": int(row["id"]),  # Assicurati che 'id' esista nel parquet
+            "title": row["title"],
+            "abstract": row["abstract"],
+            "x": float(row["x"]),  # Coordinate già pronte dal preprocessing
+            "y": float(row["y"])
+        })
+
+    logging.info(f"Query '{query}' → risultati: {[r['title'] for r in results]}")
     return results
+
 
 # --- Funzioni di supporto ---
 def embed_query(query_text, model, query_prefix=""):
