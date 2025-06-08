@@ -1,4 +1,3 @@
----
 # 🧠 Semantic Article Explorer
 
 This project is a full-stack semantic search engine for exploring scientific articles.  
@@ -65,6 +64,10 @@ Copy
 Edit
 cd frontend
 npm install
+```
+
+---
+
 🛠 Preprocessing pipeline (data → embeddings → index)
 You must run this pipeline every time you change the raw data.
 
@@ -76,6 +79,7 @@ In a notebook cell:
 python
 Copy
 Edit
+```
 import subprocess
 import sys
 
@@ -91,10 +95,14 @@ for script in scripts:
     result = subprocess.run([python_executable, script], capture_output=True, text=True)
     print(result.stdout)
     print(result.stderr)
+
+```
+
 ✅ B. From terminal
 bash
 Copy
 Edit
+```
 python preprocessing/1_clean_data.py
 python preprocessing/2_generate_embeddings.py
 python preprocessing/3_build_index.py
@@ -105,6 +113,7 @@ processed_records.parquet
 embeddings.npy
 
 faiss_index.faiss
+```
 
 🚀 Running the app locally
 ▶ Start backend
@@ -113,7 +122,9 @@ From the root folder (with .venv activated):
 bash
 Copy
 Edit
+```
 python -m uvicorn backend.main:app --reload
+```
 The backend will be live at: http://localhost:8000
 
 Swagger UI is available at: http://localhost:8000/docs
@@ -123,43 +134,39 @@ Default route /search accepts JSON like:
 json
 Copy
 Edit
+```
 { "query": "machine learning" }
+```
 ▶ Start frontend
-bash
-Copy
-Edit
+```
 cd frontend
 npm run dev
+```
 React app is live at: http://localhost:5173
 
 🧪 Debugging checklist
 If you search but see nothing in the UI:
 
- Is uvicorn running in the terminal?
-
- Does /search return actual results in http://localhost:8000/docs?
-
- Do the records in processed_records.parquet contain title and abstract?
-
- Is the number of vectors in embeddings.npy the same as the number of records?
-
- Is the FAISS index size the same?
-
- Is React fetching from http://localhost:8000/search and not something else?
+- Is uvicorn running in the terminal?
+- Does /search return actual results in http://localhost:8000/docs?
+- Do the records in processed_records.parquet contain title and abstract?
+- Is the number of vectors in embeddings.npy the same as the number of records?
+- Is the FAISS index size the same?
+- Is React fetching from http://localhost:8000/search and not something else?
 
 Use browser DevTools (F12) → Network tab → check POST /search.
 
 🌐 Optional: Redirect root to /docs
 To avoid 404 when visiting http://localhost:8000, you can add this to main.py:
 
-python
-Copy
-Edit
+```
 from fastapi.responses import RedirectResponse
 
 @app.get("/")
 def root():
     return RedirectResponse("/docs")
+
+```
 ✅ Ready for deploy?
 If everything works locally and you want to deploy to Render or another host, ask yourself:
 
@@ -171,8 +178,4 @@ Is CORS enabled correctly in main.py?
 
 Let’s ship it. 🚀
 
-Last updated: 2025-06-08
-
-yaml
-Copy
-Edit
+*Last updated: 2025-06-08*
