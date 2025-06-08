@@ -1,3 +1,4 @@
+---
 # 🧠 Semantic Article Explorer
 
 This project is a full-stack semantic search engine for exploring scientific articles.  
@@ -175,5 +176,3 @@ Last updated: 2025-06-08
 yaml
 Copy
 Edit
-
----
