@@ -5,7 +5,7 @@ It consists of a React frontend and a FastAPI backend that handles semantic quer
 
 
 ## 📁 Project Structure
-
+---
 semantic-article-explorer/
 │
 ├── backend/ # FastAPI entry point
@@ -175,3 +175,5 @@ Last updated: 2025-06-08
 yaml
 Copy
 Edit
+
+---
