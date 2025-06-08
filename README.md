@@ -5,7 +5,7 @@ It consists of a React frontend and a FastAPI backend that handles semantic quer
 
 
 ## 📁 Project Structure
----
+```
 semantic-article-explorer/
 │
 ├── backend/ # FastAPI entry point
@@ -36,16 +36,13 @@ semantic-article-explorer/
 ├── requirements-backend.txt # FastAPI deps
 ├── config.yaml # Paths, settings, model type
 └── README.md # ← you are here
-
-yaml
-Copy
-Edit
+```
 
 ---
 
 ## 🔧 Setup Instructions
 
-### 1. Create and activate the Python virtual environment
+Create and activate the Python virtual environment
 
 ```bash
 python -m venv .venv
@@ -68,17 +65,15 @@ npm install
 
 ---
 
-🛠 Preprocessing pipeline (data → embeddings → index)
+## 🛠 Preprocessing pipeline (data → embeddings → index)
 You must run this pipeline every time you change the raw data.
 
 You can do it in two ways:
 
-✅ A. From notebook (recommended)
+### ✅ A. From notebook (recommended)
 In a notebook cell:
 
-python
-Copy
-Edit
+
 ```
 import subprocess
 import sys
@@ -98,10 +93,8 @@ for script in scripts:
 
 ```
 
-✅ B. From terminal
-bash
-Copy
-Edit
+### ✅ B. From terminal
+
 ```
 python preprocessing/1_clean_data.py
 python preprocessing/2_generate_embeddings.py
@@ -115,13 +108,10 @@ embeddings.npy
 faiss_index.faiss
 ```
 
-🚀 Running the app locally
+## 🚀 Running the app locally
 ▶ Start backend
 From the root folder (with .venv activated):
 
-bash
-Copy
-Edit
 ```
 python -m uvicorn backend.main:app --reload
 ```
@@ -130,10 +120,6 @@ The backend will be live at: http://localhost:8000
 Swagger UI is available at: http://localhost:8000/docs
 
 Default route /search accepts JSON like:
-
-json
-Copy
-Edit
 ```
 { "query": "machine learning" }
 ```
@@ -144,7 +130,7 @@ npm run dev
 ```
 React app is live at: http://localhost:5173
 
-🧪 Debugging checklist
+## 🧪 Debugging checklist
 If you search but see nothing in the UI:
 
 - Is uvicorn running in the terminal?
@@ -167,7 +153,7 @@ def root():
     return RedirectResponse("/docs")
 
 ```
-✅ Ready for deploy?
+## ✅ Ready to deploy?
 If everything works locally and you want to deploy to Render or another host, ask yourself:
 
 - Is the app self-contained (no Streamlit leftovers)?
