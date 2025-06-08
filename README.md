@@ -170,11 +170,9 @@ def root():
 ✅ Ready for deploy?
 If everything works locally and you want to deploy to Render or another host, ask yourself:
 
-Is the app self-contained (no Streamlit leftovers)?
-
-Is config.yaml portable?
-
-Is CORS enabled correctly in main.py?
+- Is the app self-contained (no Streamlit leftovers)?
+- Is config.yaml portable?
+- Is CORS enabled correctly in main.py?
 
 Let’s ship it. 🚀
 
