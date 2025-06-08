@@ -3,7 +3,6 @@
 This project is a full-stack semantic search engine for exploring scientific articles.  
 It consists of a React frontend and a FastAPI backend that handles semantic queries using FAISS and SentenceTransformers.
 
----
 
 ## 📁 Project Structure
 
@@ -176,5 +175,3 @@ Last updated: 2025-06-08
 yaml
 Copy
 Edit
-
----
