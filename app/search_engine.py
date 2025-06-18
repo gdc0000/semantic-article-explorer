@@ -1,152 +1,65 @@
-# search_engine.py
-
+# app/search_engine.py
 import numpy as np
 import logging
-from app import data_manager
 
-# --------------------------
-# Configure logging format
-# --------------------------
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+# Configure basic logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
-# --------------------------
-# Load all required resources once at import
-# --------------------------
-config = data_manager.load_config()
-df_articles = data_manager.load_processed_records(config['paths']['processed_data'])
-faiss_index = data_manager.load_faiss_index(config)
-embedding_model = data_manager.load_embedding_model(config)
-
-# Settings from config
-query_prefix = config.get('embedding_model', {}).get('query_prefix', "")
-top_k = config['app_settings']['default_top_k']
-
-
-# ==========================
-# MAIN SEARCH FUNCTION
-# ==========================
-def search_articles(query: str = None, article_id: int = None) -> list[dict]:
+def embed_query(query_text, model, query_prefix=""):
     """
-    Performs semantic search either using a text query or an existing article ID.
-    Returns a list of similar article dictionaries.
+    Generates an embedding for a single query string using the provided model.
+    Adds an optional prefix (e.g., for e5 models).
     """
-    # --- Get the embedding for the query or the article ---
-    if query:
-        query_embedding = embed_text(query)
-    elif article_id is not None:
-        text = extract_article_text(article_id)
-        query_embedding = embed_text(text)
-        logging.info(f"Embedding generated for article ID {article_id}")
-    else:
-        raise ValueError("Either a text query or an article_id must be provided.")
-
-    # --- Abort if the embedding failed ---
-    if query_embedding is None:
-        return []
-
-    # --- Run similarity search in the FAISS index ---
-    distances, indices = search_faiss_index(query_embedding, faiss_index, top_k=top_k + 1)
-    if indices is None or len(indices) == 0:
-        return []
-
-    # --- Convert index positions to article IDs ---
-    similar_ids = [df_articles.iloc[idx]['id'] for idx in indices]
-
-    # --- Exclude the original article if searching by article_id ---
-    if article_id is not None:
-        similar_ids = [i for i in similar_ids if i != article_id]
-
-    # --- Limit to top_k and return matching records ---
-    top_ids = similar_ids[:top_k]
-    results_df = df_articles[df_articles['id'].isin(top_ids)]
-
-    logging.info(f"Found {len(results_df)} similar articles: {top_ids}")
-    return results_df.to_dict(orient='records')
-
-
-
-# ==========================
-# TEXT EMBEDDING FUNCTION
-# ==========================
-def embed_text(text: str) -> np.ndarray:
-    """
-    Converts input text into an embedding using the model.
-    Adds prefix if specified in config (e.g., for e5 models).
-    """
-    if not embedding_model:
-        logging.error("Embedding model is not loaded.")
+    if not model:
+        logging.error("Embedding model not provided to embed_query.")
         return None
-
     try:
-        full_text = query_prefix + text
-        embedding = embedding_model.encode([full_text])  # encode expects list
-        logging.info(f"Text embedded successfully. Shape: {embedding.shape}")
-        return embedding.astype(np.float32)  # FAISS requires float32
+        # Add prefix if provided (e.g., "query: " for e5 models)
+        text_to_embed = query_prefix + query_text if query_prefix else query_text
+        query_embedding = model.encode([text_to_embed]) # model.encode expects a list
+        logging.info(f"Query '{query_text}' embedded successfully. Shape: {query_embedding.shape}")
+        return query_embedding.astype(np.float32) # Ensure float32 for FAISS
     except Exception as e:
-        logging.error(f"Failed to embed text: {e}")
+        logging.error(f"Error embedding query '{query_text}': {e}")
         return None
 
-
-# ==========================
-# FAISS SEARCH FUNCTION
-# ==========================
-def search_faiss_index(query_embedding: np.ndarray, index, top_k: int = 10):
+def search_faiss_index(query_embedding, index, top_k=10):
     """
-    Performs nearest-neighbor search in FAISS index using the input embedding.
-    Returns distances and indices of top_k matches.
+    Searches the FAISS index for the top_k nearest neighbors to the query_embedding.
+    Returns distances and indices of the neighbors.
     """
     if query_embedding is None:
-        logging.warning("No embedding provided.")
+        logging.warning("Query embedding is None. Cannot search.")
         return None, None
-
     if not index:
-        logging.error("FAISS index is not loaded.")
+        logging.error("FAISS index not provided to search_faiss_index.")
         return None, None
-
     if index.ntotal == 0:
-        logging.warning("FAISS index is empty.")
+        logging.warning("FAISS index is empty. Cannot perform search.")
         return np.array([]), np.array([])
 
     try:
-        # Ensure embedding is 2D
+        # Ensure query_embedding is 2D (batch of 1)
         if query_embedding.ndim == 1:
             query_embedding = np.expand_dims(query_embedding, axis=0)
 
         distances, indices = index.search(query_embedding, top_k)
-        logging.info(f"FAISS search returned {len(indices[0])} results.")
+        logging.info(f"FAISS search complete. Found {len(indices[0])} neighbors.")
+        # distances and indices are 2D arrays (batch_size, top_k), extract first row
         return distances[0], indices[0]
     except Exception as e:
-        logging.error(f"Error during FAISS search: {e}")
+        logging.error(f"Error searching FAISS index: {e}")
         return None, None
 
-
-# ==========================
-# ARTICLE TEXT EXTRACTION
-# ==========================
-def extract_article_text(article_id: str) -> str:
-    """
-    Concatenates title and abstract of the article to create a searchable string.
-    """
-    print(f"\n🔍 CERCO articolo con id = {article_id}")
-    print(f"🧠 Tipo di article_id: {type(article_id)}")
-
-    filtered = df_articles[df_articles['id'] == int(article_id)]
-    print(f"🎯 Match trovati: {len(filtered)}")
-    print(filtered)
-
-    if filtered.empty:
-        raise ValueError(f"❌ No article found with ID {article_id}")
-
-    # return filtered.iloc[0]['title'] + ". " + filtered.iloc[0]['abstract']
-
-    
-    row = df_articles[df_articles['id'] == str(article_id)].iloc[0]
-    matches = df_articles[df_articles['id'] == str(article_id)]
-    if matches.empty:
-        raise ValueError(f"No article found with ID {article_id}")
-    row = matches.iloc[0]
-
-    return " ".join([str(row.get(field, "")) for field in ['title', 'abstract']])
+# Example usage (conceptual, would be called from app.py)
+# config = data_manager.load_config()
+# if config:
+#   embedding_model = data_manager.load_embedding_model(config)
+#   faiss_index = data_manager.load_faiss_index(config)
+#   if embedding_model and faiss_index:
+#       query = "machine learning applications"
+#       query_prefix = config.get('embedding_model', {}).get('query_prefix', "")
+#       q_embedding = embed_query(query, embedding_model, query_prefix)
+#       if q_embedding is not None:
+#           distances, neighbor_indices = search_faiss_index(q_embedding, faiss_index, top_k=5)
+#           # Process results...
