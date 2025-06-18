@@ -1,14 +1,9 @@
 # config.yaml
 paths:
-  # raw_data: "data/raw_records.json"
-  raw_data: "C:/Users/Gabriele/Desktop/semantic-article-explorer/semantic-article-explorer/data/raw_records.json"
-  # processed_data: "/data/processed_records.parquet"
-  # embeddings: "/data/embeddings.npy"
-  # faiss_index: "/data/faiss_index.faiss"
-
-  processed_data: "C:/Users/Gabriele/Desktop/semantic-article-explorer/semantic-article-explorer/data/processed_records.parquet"
-  embeddings: "C:/Users/Gabriele/Desktop/semantic-article-explorer/semantic-article-explorer/data/embeddings.npy"
-  faiss_index: "C:/Users/Gabriele/Desktop/semantic-article-explorer/semantic-article-explorer/data/faiss_index.faiss"
+  raw_data: data\raw_records.json
+  processed_data: data\processed_records.parquet
+  embeddings: data\embeddings.npy
+  faiss_index: data\faiss_index.faiss
 
 embedding_model:
   name: "sentence-transformers/all-MiniLM-L6-v2" # 384 dimensions. Good balance.
